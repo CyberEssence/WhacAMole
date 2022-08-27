@@ -2,19 +2,19 @@
 <resources>
     <!--Стиль для TextView заголовка приложения-->
     <style name="titleAppTextViewStyle" parent="Widget.AppCompat.TextView">
-        <item name="android:textColor">@color/white</item>
+        <item name="android:textColor">@color/light_blue</item>
         <item name="android:textSize">@dimen/font_size_default_title</item>
     </style>
 
     <!--Стиль для TextView обычного текста-->
     <style name="textTextViewStyle" parent="Widget.AppCompat.TextView">
-        <item name="android:textColor">@color/white</item>
+        <item name="android:textColor">@color/light_blue</item>
         <item name="android:textSize">@dimen/font_size_default_text</item>
     </style>
 
     <!--Стиль для TextView заголовков-->
     <style name="titleTextViewStyle" parent="Widget.AppCompat.TextView">
-        <item name="android:textColor">@color/white</item>
+        <item name="android:textColor">@color/light_blue</item>
         <item name="android:textSize">@dimen/font_size_default_text</item>
     </style>
 
