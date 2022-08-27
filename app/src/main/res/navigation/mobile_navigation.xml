@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@id/fragment_menu">
+
+    <fragment
+        android:id="@+id/fragment_menu"
+        android:name="com.example.whacamole.ui.screen.MenuFragment"
+        android:label="@string/title_menu"
+        tools:layout="@layout/fragment_menu">
+        <action
+            android:id="@+id/action_fragment_menu_to_fragment_game"
+            app:destination="@id/fragment_game" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/fragment_game"
+        android:name="com.example.whacamole.ui.screen.GameFragment"
+        android:label="@string/title_game"
+        tools:layout="@layout/fragment_game">
+        <action
+            android:id="@+id/action_fragment_game_to_fragment_result_game"
+            app:destination="@id/fragment_result_game"
+            app:popUpTo="@id/fragment_menu"
+            app:popUpToInclusive="true"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/fragment_result_game"
+        android:name="com.example.whacamole.ui.screen.ResultGameFragment"
+        android:label="@string/title_result_game"
+        tools:layout="@layout/fragment_result_game">
+
+        <argument
+            android:name="countClick"
+            android:defaultValue="0" />
+        <action
+            android:id="@+id/action_fragment_result_game_to_fragment_menu"
+            app:destination="@id/fragment_menu"
+            app:popUpTo="@id/fragment_result_game"
+            app:popUpToInclusive="true"/>
+        <action
+            android:id="@+id/action_fragment_result_game_to_fragment_game"
+            app:destination="@id/fragment_game"
+            app:popUpTo="@id/fragment_result_game"
+            app:popUpToInclusive="true"/>
+    </fragment>
+
+</navigation>
